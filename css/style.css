@@ -1,0 +1,394 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Source Sans 3", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+p,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* navigation */
+
+nav,
+.nav-left,
+.nav-right {
+  display: flex;
+}
+
+.nav-left,
+.nav-right {
+  align-items: center;
+}
+
+nav {
+  justify-content: space-between;
+  min-height: 60px;
+  width: 100%;
+  padding: 0 1.25em;
+}
+
+.nav-left {
+  font-weight: 600;
+  list-style: none;
+  gap: 2em;
+}
+
+.nav-right {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  gap: 0.2em;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.nav-link {
+  color: #090909;
+}
+
+.logo-title {
+  color: #0e0e0e;
+}
+
+/* main */
+
+.journal-one {
+  min-height: 294px;
+  background-image: url("../images/main.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 85%;
+}
+
+.journal-link,
+.journal-link:visited {
+  display: block;
+  color: #ffffff;
+}
+
+.journal-one-date {
+  font-size: 0.75rem;
+  padding: 7.25em 1.67em 0 1.67em;
+}
+
+.journal-one-heading {
+  font-size: 2rem;
+  padding: 0.25em 0.625em 0 0.625em;
+}
+
+.journal-one-content {
+  font-size: 1rem;
+  padding: 0.5em 1.25em 1.625em 1.25em;
+}
+
+.journal-one-heading,
+.journal-one-content {
+  line-height: 1;
+}
+
+/* blogs */
+
+.blog-img {
+  width: 100%;
+  height: 232px;
+}
+
+.blog-section {
+  grid-area: blog;
+}
+
+.blog-date {
+  color: #000000;
+  font-size: 0.875rem;
+  padding-top: 0.875em;
+}
+
+.blog-heading {
+  color: #141414;
+  font-size: 1.5rem;
+}
+
+.blog-content {
+  color: #505050;
+  line-height: 1.25;
+  font-size: 1rem;
+}
+
+.blog-heading,
+.blog-content {
+  padding-top: 0.25em;
+}
+
+/* grid */
+
+.main {
+  margin-top: 2.1875em;
+  display: grid;
+  row-gap: 2.5em;
+  grid-template-columns: 1.25em 1fr 1.25em;
+  grid-template-areas:
+    ".... blo1 ...."
+    ".... blo2 ...."
+    ".... blo3 ...."
+    ".... blo4 ...."
+    ".... blo5 ...."
+    ".... blo6 ...."
+    ".... view ....";
+}
+
+.blog-one {
+  grid-area: blo1;
+}
+
+.blog-two {
+  grid-area: blo2;
+}
+
+.blog-three {
+  grid-area: blo3;
+}
+
+.blog-four {
+  grid-area: blo4;
+}
+
+.blog-five {
+  grid-area: blo5;
+}
+
+.blog-six {
+  grid-area: blo6;
+}
+
+.view-more {
+  grid-area: view;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: underline;
+  padding-bottom: 2.5em;
+}
+
+/* footer */
+
+footer {
+  min-height: 105px;
+  background: #202020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-content {
+  color: #ececec;
+  font-weight: 700;
+}
+
+.foot-copyright {
+  color: #d7d7d7;
+  text-align: center;
+}
+
+/* about page */
+
+.avatar {
+  width: 182px;
+  height: 182px;
+  margin-left: 1.25em;
+  margin-top: 1.625em;
+}
+
+.about-heading {
+  line-height: 1.08;
+  font-size: 2rem;
+  margin: 0.84375em 1.3125em 0 0.625em;
+}
+
+.about-content {
+  font-size: 1rem;
+  padding: 1em 1.25em 0 1.25em;
+}
+
+.content-one {
+  font-size: 1rem;
+  padding: 2.125em 1.25em 0 1.25em;
+}
+
+.posts-heading {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.posts {
+  margin-top: 1.6875em;
+  display: grid;
+  grid-template-columns: 1.25em 1fr 1.25em;
+  grid-template-areas:
+    ".... blo1 ...."
+    ".... blo2 ...."
+    ".... blo3 ....";
+  row-gap: 2.5625em;
+  padding-bottom: 3.5em;
+}
+
+/* journal page */
+
+.journal-image {
+  width: 374px;
+  height: 191px;
+  object-fit: cover;
+  object-position: 60% 80%;
+}
+
+.journal-date {
+  padding-bottom: 1em;
+}
+
+.journal-heading {
+  line-height: 1.08;
+  font-size: 2rem;
+  padding-bottom: 0.5em;
+}
+
+.journal-content {
+  font-size: 1rem;
+  padding-bottom: 2em;
+}
+
+.header-journal {
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  padding-top: 2em;
+}
+
+@media (min-width: 600px) {
+  .journal-one-date {
+    font-size: 0.75rem;
+    padding: 26.25em 1.67em 0 1.67em;
+  }
+
+  .main {
+    margin-top: 3.3125em;
+    display: grid;
+    row-gap: 2.875em;
+    column-gap: 1.625em;
+    grid-template-columns: 3.3125em 1fr 1fr 1fr 3.3125em;
+    grid-template-areas:
+      ".... blo1 blo2 blo3 ...."
+      ".... blo4 blo5 blo6 ...."
+      ".... .... view .... ....";
+  }
+
+  .blog-img {
+    max-width: 380px;
+  }
+
+  .header-about,
+  .main-about,
+  .header-journal,
+  .main-journal {
+    background: #fafafa;
+  }
+
+  nav {
+    padding: 0 3.3125em;
+  }
+
+  .header-about {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar {
+    margin-left: 3.3125em;
+    margin-top: 5.625em;
+  }
+
+  .about-heading {
+    margin-top: 3em;
+  }
+
+  .wrapper-about {
+    margin-right: 3.3125em;
+  }
+
+  .more-content {
+    padding-right: 7.5em;
+    padding-left: 7.5em;
+    padding-top: 2.0625em;
+  }
+
+  .content-one {
+    padding-top: 3.1875em;
+  }
+
+  .posts {
+    margin-top: 1.75em;
+    display: grid;
+    grid-template-columns: 3.3125em 1fr 1fr 1fr 3.3125em;
+    grid-template-areas: ".... blo1 blo2 blo3 ....";
+    column-gap: 1.625em;
+    padding-bottom: 3.1875em;
+  }
+
+  .journal-date {
+    padding-top: 2.1875em;
+  }
+
+  .journal-date,
+  .journal-content,
+  .more-journal-content {
+    padding-left: 7.5em;
+    padding-right: 7.5em;
+  }
+
+  .journal-heading {
+    padding-left: 3.75em;
+    padding-right: 3.75em;
+  }
+
+  .journal-image {
+    width: 100%;
+    height: 488px;
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 816px) {
+  .journal-one {
+    height: 488px;
+  }
+
+  .journal-one-date {
+    font-size: 1rem;
+    padding: 17.9375em 26.0725em 0 3.3125em;
+  }
+
+  .journal-one-heading {
+    font-size: 2.5rem;
+    padding: 0.225em 9.375em 0 1.325em;
+  }
+
+  .journal-one-content {
+    font-size: 1rem;
+    padding: 0.5625em 26.125em 3.703125em 3.3125em;
+  }
+}
